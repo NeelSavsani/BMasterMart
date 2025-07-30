@@ -1,9 +1,11 @@
 services:
   - type: web
-    name: bmastermart-backend  
-    env: php
-    buildCommand: ""
-    startCommand: ""
-    plan: free
-    region: oregon
-    rootDir: public
+    name: BMasterMart
+    env: docker
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: DB_PORT
+        value: 3307
+      - key: PHP_VERSION
+        value: 8.2.12
