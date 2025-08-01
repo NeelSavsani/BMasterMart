@@ -2,6 +2,7 @@
 
 // Allow requests from your frontend domain
 header("Access-Control-Allow-Origin: https://mastermart.vercel.app");
+header("Access-Control-Allow-Origin: *");
 
 // Also allow POST method and required headers
 header("Access-Control-Allow-Methods: POST");
