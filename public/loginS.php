@@ -1,4 +1,11 @@
 <?php
+
+// Allow requests from your frontend domain
+header("Access-Control-Allow-Origin: https://mastermart.vercel.app");
+
+// Also allow POST method and required headers
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
 $firebaseUrl = "https://mastermart-19050-default-rtdb.asia-southeast1.firebasedatabase.app/users.json";
 
 $email = $_POST['email'] ?? '';
